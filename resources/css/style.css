@@ -8,7 +8,7 @@ html {
 
 body {
   font-family: Helvetica, sans-serif;
-  width: auto;
+  width: 100%;
   margin: 0;
 }
 
@@ -30,19 +30,20 @@ p {
 .logo {
   display: flex;
   width: 960px;
-  margin: auto;
-  color: white;
+  margin: 0 auto;
+  align-items: center;
   border: 3px solid #cc66ff;
 }
 
 .logo img {
   height: 1.5rem;
   width: auto;
-  padding: 0.66rem 1rem 0.66rem 0.5rem;
+  margin-left: 0.5rem;
 }
 
 .logo p {
   font-size: 1rem;
+  margin: 0.66rem 0 0.66rem 1rem;
 }
 
 /* Header section */
