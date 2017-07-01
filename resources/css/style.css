@@ -52,7 +52,6 @@ p {
   display: flex;
   width: 100%;
   height: 25rem;
-  margin: auto;
   background-image: url(../images/moto.jpeg);
   background-size: cover;
   background-position: center;
@@ -72,24 +71,20 @@ p {
   display: flex;
   background-color: black;
   color: white;
-  width: 25rem;
+  width: 20rem;
+  padding: 2rem 2rem 1rem 3rem;
   flex-direction: column;
   border: 3px solid #ff0000;
 }
 
 .header-copy h3 {
   font-size: 1rem;
-  font-weight: bold;
-  padding-top: 2rem;
-  padding-left: 3rem;
-  margin-top: 0;
   margin-bottom: 0.25rem;
 }
 
 .header-copy h1 {
   font-size: 2rem;
-  font-weight: bold;
-  padding-left: 3rem;
+  margin-top: 0.5rem;
 }
 
 
@@ -126,6 +121,7 @@ nav {
 .main {
   display: flex;
   width: 960px;
+  height: auto;
   margin: auto;
   padding: 3rem 0;
   justify-content: space-between;
@@ -133,24 +129,28 @@ nav {
 }
 
 .product {
-  display: flex;
   width: 30%;
-  height: auto;
-  padding-bottom: 0;
-  flex-direction: column;
+}
+
+.product-image {
+  display: flex;
+  height: 9rem;
+  padding: 2rem 0;
+  justify-content: center;
+  align-items: center;
   border: 4px solid black;
 }
 
-.product img {
-  display: flex;
-  height: 9rem;
-  width: auto;
-  padding: 2rem 0;
+.product-image img {
+  max-width: 8rem;
 }
 
 .product p {
-  display: flex;
-  justify-content: center;
+  display: block;
+  text-align: center;
+  padding: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
   background-color: black
 }
 
@@ -167,25 +167,27 @@ nav {
   display: flex;
   width: 960px;
   margin: auto;
-  padding: 3rem 0;
+  padding-bottom: 4rem;
   justify-content: space-between;
   border: 3px solid #006600;
 }
 
 .details {
-  display: flex;
+  display: block;
   width: 35%;
-  height: auto;
-  flex-direction: column;
   border: 3px solid #0000cc;
 }
 
-.detail-title {
+.detail-title p {
+  padding: 1rem 1rem;
+  margin: 0;
   background-color: black;
 }
 
-.detail-copy {
-
+.detail-copy p {
+  padding: 1rem 1rem;
+  margin: 0;
+  color: black;
 }
 
 /* Footer section */
@@ -193,6 +195,7 @@ nav {
 .footer-container {
   display: flex;
   width: 100%;
+  height: 10rem;
   margin: auto;
   background-color: black;
   border: 3px solid #00ccff;
