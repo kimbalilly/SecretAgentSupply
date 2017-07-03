@@ -234,7 +234,7 @@ p, span {
 /* Mobile */
 
 @media only screen and (max-width: 470px) {
-    nav, .main, .info, .footer  {
+    .header, nav, .main, .info, .footer  {
       width: 470px;
     }
 
