@@ -12,7 +12,7 @@ body {
   margin: 0;
 }
 
-p {
+p, span {
  color: white;
 }
 
@@ -23,8 +23,6 @@ p {
   width: 100%;
   margin: auto;
   background-color: black;
-  border: 3px solid #00cc99;
-
 }
 
 .logo {
@@ -32,7 +30,6 @@ p {
   width: 960px;
   margin: 0 auto;
   align-items: center;
-  border: 3px solid #cc66ff;
 }
 
 .logo img {
@@ -56,7 +53,6 @@ p {
   background-size: cover;
   background-position: center;
   justify-content: center;
-  border: 3px solid #66ff66;
 }
 
 .header {
@@ -64,7 +60,6 @@ p {
   width: 960px;
   padding-top: 9rem;
   align-items: flex-start;
-  border: 3px solid #ff9900;
 }
 
 .header-copy {
@@ -74,7 +69,6 @@ p {
   width: 20rem;
   padding: 2rem 2rem 1rem 3rem;
   flex-direction: column;
-  border: 3px solid #ff0000;
 }
 
 .header-copy h3 {
@@ -87,16 +81,15 @@ p {
   margin-top: 0.5rem;
 }
 
-
 /* Nav section */
 
 .nav-container {
   display: flex;
   width: 100%;
   height: 2.5rem;
-  background-color: firebrick;
   align-items: center;
-  border: 3px solid #9933ff;
+  justify-content: center;
+  background-color: firebrick;
 }
 
 .desktop-nav {
@@ -104,7 +97,6 @@ p {
   width: 960px;
   flex-direction: row;
   justify-content: space-between;
-  border: 3px solid #9934ff;
 }
 
 .mobile-nav {
@@ -118,7 +110,6 @@ p {
   width: 100%;
   margin: auto;
   background-color: white;
-  border: 3px solid #ffff00;
 }
 
 .main {
@@ -128,7 +119,6 @@ p {
   margin: auto;
   padding: 3rem 0;
   justify-content: space-between;
-  border: 3px solid #cc0066;
 }
 
 .product {
@@ -148,7 +138,7 @@ p {
   max-width: 8rem;
 }
 
-.product p {
+.product span {
   display: block;
   text-align: center;
   padding: 0.5rem;
@@ -162,32 +152,31 @@ p {
 .info-container {
   display: flex;
   width: 100%;
-  margin: auto;
-  border: 3px solid #669999;
+  justify-content: center;
 }
 
 .info {
   display: flex;
   width: 960px;
-  margin: auto;
   padding-bottom: 4rem;
   justify-content: space-between;
-  border: 3px solid #006600;
 }
 
 .details {
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: 35%;
-  border: 3px solid #0000cc;
 }
 
-.detail-title p {
+.detail-title span {
+  display: flex;
   padding: 1rem 1rem;
   margin: 0;
   background-color: black;
 }
 
-.detail-copy p {
+.detail-copy span {
+  display: flex;
   padding: 1rem 1rem;
   margin: 0;
   color: black;
@@ -201,14 +190,12 @@ p {
   height: 10rem;
   margin: auto;
   background-color: black;
-  border: 3px solid #00ccff;
 }
 
 .footer {
   display: flex;
   width: 960px;
   margin: auto;
-  border: 3px solid #ccff99;
 }
 
 /* Tablet */
@@ -216,6 +203,10 @@ p {
 @media only screen and (max-width: 960px) {
     .logo, .header, nav, .main, .info, .footer  {
       width: 960px;
+    }
+
+    .logo, .header, nav, .main, .info, .footer  {
+      margin: 0 2rem;
     }
 
     .product {
@@ -234,10 +225,71 @@ p {
       display: block;
       text-align: center;
     }
+
+    .footer {
+      align-items: center;
+    }
   }
 
 /* Mobile */
 
 @media only screen and (max-width: 470px) {
-
+    nav, .main, .info, .footer  {
+      width: 470px;
     }
+
+    .logo img {
+      margin: auto;
+      padding: 1rem 0;
+    }
+
+    .logo p {
+      display: none;
+    }
+
+    .header-container {
+      height: 20rem;
+    }
+
+    .header {
+      padding-top: 10rem;
+      align-items: flex-end;
+    }
+
+    .header-copy {
+      height: 5rem;
+      padding: .5rem 2rem;
+    }
+
+    .header-copy h3 {
+      font-size: 0.77rem;
+    }
+
+    .header-copy h1 {
+      font-size: 1rem;
+    }
+
+    .product {
+      width: 100%;
+      margin: auto;
+    }
+
+    #glasses, #watch {
+      display: none;
+    }
+
+    .info {
+      flex-wrap: wrap;
+      padding-bottom: 2rem;
+    }
+
+    .details {
+      min-width: 100%;
+      margin-bottom: .5rem;
+    }
+
+    .footer {
+      justify-content: center;
+      align-items: center;
+    }
+  }
